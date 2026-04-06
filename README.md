@@ -1,3 +1,7 @@
+# ---
+
+> OpenClaw AI Agent Skill
+
 ---
 name: hierarchical-memory
 description: Four-level memory system (DIKW pyramid) with automatic knowledge refinement. L0 History → L1 Evaluations → L2 Lessons → L3 Insights. Includes hot/warm/cold tiers, automatic promotion rules, and cross-level search. Use after completing tasks (evaluate), periodically (promote lessons), or when recalling context (cross-level search).
@@ -528,3 +532,13 @@ bash skills/hierarchical-memory/scripts/evaluate.sh --init
 3. **Graceful degradation.** If lessons.json doesn't exist, the system still works — just without L2. Each level is independently useful.
 4. **Contradiction resolution.** New evidence can demote or prune old lessons. Confidence decays if a pattern stops appearing.
 5. **Human-in-the-loop.** Automatic promotion generates drafts. The agent reviews before writing. No silent MEMORY.md rewrites.
+
+## Installation
+
+```bash
+cp -r hierarchical-memory/ ~/.openclaw/workspace/skills/hierarchical-memory/
+```
+
+## License
+
+MIT © [Sentra Technology](https://github.com/Icattj)
